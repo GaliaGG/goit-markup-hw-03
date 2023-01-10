@@ -30,7 +30,6 @@ body {
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
-
 }
 
 .flex-container {
@@ -335,12 +334,3 @@ body {
   border: 1px solid #e7e9fc;
   border-top: none;
 }
-
-/* body {
-  font-family: 'Roboto';
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #434455;
-}
- */
