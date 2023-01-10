@@ -20,7 +20,25 @@ body {
 
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  outline: 2px solid tomato;
+}
+
+.flex-container {
+  display: flex;
+  border-bottom: 1px solid #e7e9fc;
+}
+
 /* Header */
 
 /* Logo */
@@ -48,7 +66,47 @@ body {
 }
 
 /* Site Nav + Hero*/
+.main-nav {
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.nav-list {
+  display: flex;
+  column-gap: 40px;
+  margin-left: 76px;
+}
+
+.nav-address {
+  display: flex;
+  column-gap: 40px;
+  margin-left: auto;
+  font-style: normal;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* Hero */
+
+.hero-container {
+  background-color: var(--title-color);
+}
+
+.hero-section {
+  padding-top: 188px;
+  padding-bottom: 188px;
+  text-align: center;
+}
+
 .title {
+  margin-top: 0;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 496px;
+
   font-family: inherit;
   font-weight: 600;
   font-size: 16px;
@@ -66,26 +124,27 @@ body {
 .hero {
   font-size: 56px;
   line-height: 1.07;
-
-  text-align: center;
   letter-spacing: 0.02em;
 
   color: var(--white);
-  background-color: var(--title-color);
 }
 
 .button {
+  min-width: 169px;
+  display: inline-block;
+  padding: 16px 32px;
+
+  cursor: pointer;
   font-family: inherit;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.19;
-
-  display: flex;
-  align-items: center;
   letter-spacing: 0.04em;
-
   color: var(--white);
   background-color: var(--acent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-style: none;
 }
 
 .button:focus,
@@ -95,6 +154,8 @@ body {
 
 .contact,
 .text-portfolio {
+  margin: 0;
+
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
@@ -104,17 +165,57 @@ body {
   color: var(--primary-text-color);
 }
 
-/* Other */
-.title-container {
+/* Advantages */
+
+.advantages-section {
+  padding-top: 120px;
+}
+
+.advantages-title,
+.portfolio-title {
+  display: none;
+}
+
+.advantages-list {
+  display: flex;
+  column-gap: 24px;
+}
+
+.advantages-item,
+.team-item {
+  width: calc((100%-72px) / 4);
+}
+
+.title-container,
+.team-item-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-
   color: var(--title-color);
 }
 
-.title-main-container {
+.advantages-text,
+.team-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Services and Team*/
+.services-section,
+.section-team {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.services-title,
+.team-title {
+  margin-top: 0;
+  margin-bottom: 72px;
+
   font-weight: 600;
   font-size: 36px;
   line-height: 1.11;
@@ -126,32 +227,80 @@ body {
   color: var(--title-color);
 }
 
-.section-team {
+.services-list,
+.team-list {
+  display: flex;
+  column-gap: 24px;
+  text-align: center;
+}
+
+.services-item {
+  width: calc((100%-48px) / 3);
+}
+
+.img {
+  display: block;
+  width: 100%;
+}
+
+.team-container {
   background-color: #f4f4fd;
 }
 
+.team-card {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 /* Footer */
+.footer-container {
+  background-color: var(--title-color);
+}
+
+.section-footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 .text-footer {
   color: #e7e9fc;
 }
 
-.section-footer {
-  background-color: var(--title-color);
+.section-footer .logo {
+  margin-bottom: 16px;
+}
+
+.text-footer {
+  max-width: 264px;
+  margin: 0;
 }
 
 /* Portfolio */
+.portfolio-container {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.portfolio-filter {
+  margin-bottom: 72px;
+}
+
+.filter-list {
+  display: flex;
+  column-gap: 24px;
+  justify-content: center;
+}
+
 .button-portfolio {
+  padding: 12px 24px;
+  border-style: none;
+
   cursor: pointer;
   font-family: inherit;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
-
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.04em;
-
   color: var(--acent-color);
   background-color: #e7e9fc;
 }
@@ -160,6 +309,32 @@ body {
 .acent-portfolio:focus {
   color: var(--white);
   background-color: #404bbf;
+}
+
+/* List 2 */
+
+.card-list {
+  margin: 0;
+  padding-left: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.card-item {
+  width: calc((100% - 48px) / 3);
+}
+
+.card-text {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+
+  background: var(--white);
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 /* body {
