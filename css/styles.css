@@ -2,7 +2,10 @@
   --title-color: #2e2f42;
   --primary-text-color: #434455;
   --acent-color: #4d5ae5;
+  --button-acent: #404bbf;
   --white: #ffffff;
+  --additional-color: #e7e9fc;
+  --additional-secondary-color: #f4f4fd;
 }
 
 body {
@@ -32,9 +35,13 @@ body {
   margin-left: auto;
 }
 
+.border {
+  background: var(--white);
+  border-bottom: 1px solid var(--additional-color);
+}
+
 .flex-container {
   display: flex;
-  border-bottom: 1px solid #e7e9fc;
 }
 
 /* Header */
@@ -58,17 +65,20 @@ body {
   color: var(--title-color);
 }
 
+.main-nav .logo {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 .logo-footer {
-  color: #f4f4fd;
+  color: var(--additional-secondary-color);
   background-color: var(--title-color);
 }
 
-/* Site Nav + Hero*/
+/* Site Nav*/
 .main-nav {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .nav-list {
@@ -77,22 +87,43 @@ body {
   margin-left: 76px;
 }
 
+.nav-title {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+}
+
 .nav-address {
   display: flex;
   column-gap: 40px;
   margin-left: auto;
   font-style: normal;
+}
+
+.contact,
+.text-portfolio {
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+
+  color: var(--primary-text-color);
+}
+
+.contact {
   padding-top: 24px;
   padding-bottom: 24px;
 }
 
 /* Hero */
-
-.hero-container {
+.hero-section {
   background-color: var(--title-color);
 }
 
-.hero-section {
+.hero-container {
   padding-top: 188px;
   padding-bottom: 188px;
   text-align: center;
@@ -105,13 +136,12 @@ body {
   margin-right: auto;
   max-width: 496px;
 
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
   letter-spacing: 0.02em;
 
-  color: var(--title-color);
+  color: var(--white);
 }
 
 .primary-acent:hover,
@@ -147,25 +177,12 @@ body {
 
 .button:focus,
 .button:hover {
-  background-color: var(--primary-text-color);
-}
-
-.contact,
-.text-portfolio {
-  margin: 0;
-
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-
-  color: var(--primary-text-color);
+  background-color: var(--button-acent);
 }
 
 /* Advantages */
 
-.advantages-section {
+.advantages-container {
   padding-top: 120px;
 }
 
@@ -203,8 +220,8 @@ body {
 }
 
 /* Services and Team*/
-.services-section,
-.section-team {
+.services-container,
+.team-container {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -214,7 +231,7 @@ body {
   margin-top: 0;
   margin-bottom: 72px;
 
-  font-weight: 600;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
 
@@ -234,6 +251,7 @@ body {
 
 .services-item {
   width: calc((100%-48px) / 3);
+  border: 1px solid var(--additional-color);  
 }
 
 .img {
@@ -241,13 +259,19 @@ body {
   width: 100%;
 }
 
-.team-container {
-  background-color: #f4f4fd;
+.section-team {
+  background-color: var(--additional-secondary-color);
 }
 
 .team-card {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.team-item {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
 /* Footer */
@@ -261,7 +285,7 @@ body {
 }
 
 .text-footer {
-  color: #e7e9fc;
+  color: var(--additional-color);
 }
 
 .section-footer .logo {
@@ -279,19 +303,17 @@ body {
   padding-bottom: 120px;
 }
 
-.portfolio-filter {
-  margin-bottom: 72px;
-}
-
 .filter-list {
   display: flex;
   column-gap: 24px;
   justify-content: center;
+  margin-bottom: 72px;
 }
 
 .button-portfolio {
   padding: 12px 24px;
-  border-style: none;
+  border: 1px solid var(--additional-color);
+border-radius: 4px;
 
   cursor: pointer;
   font-family: inherit;
@@ -300,13 +322,14 @@ body {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--acent-color);
-  background-color: #e7e9fc;
+  background-color: var(--additional-secondary-color);
 }
 
 .acent-portfolio:hover,
 .acent-portfolio:focus {
   color: var(--white);
-  background-color: #404bbf;
+  background-color: var(--button-acent);
+  border: 1px solid transparent;
 }
 
 /* List 2 */
@@ -331,6 +354,10 @@ body {
   padding-left: 16px;
 
   background: var(--white);
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--additional-color);
   border-top: none;
+}
+
+.text-portfolio {
+  margin: 0;
 }
