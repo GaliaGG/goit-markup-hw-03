@@ -121,13 +121,11 @@ body {
 /* Hero */
 .hero-section {
   background-color: var(--title-color);
-}
-
-.hero-container {
   padding-top: 188px;
   padding-bottom: 188px;
   text-align: center;
 }
+
 
 .title {
   margin-top: 0;
@@ -182,7 +180,7 @@ body {
 
 /* Advantages */
 
-.advantages-container {
+.advantages-section {
   padding-top: 120px;
 }
 
@@ -220,8 +218,8 @@ body {
 }
 
 /* Services and Team*/
-.services-container,
-.team-container {
+.services-section,
+.team-section {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -259,7 +257,7 @@ body {
   width: 100%;
 }
 
-.section-team {
+.team-section {
   background-color: var(--additional-secondary-color);
 }
 
@@ -275,11 +273,8 @@ body {
 }
 
 /* Footer */
-.footer-container {
+.footer-section {
   background-color: var(--title-color);
-}
-
-.section-footer {
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -288,7 +283,7 @@ body {
   color: var(--additional-color);
 }
 
-.section-footer .logo {
+.container > .logo {
   margin-bottom: 16px;
 }
 
@@ -298,7 +293,7 @@ body {
 }
 
 /* Portfolio */
-.portfolio-container {
+.portfolio-section {
   padding-top: 96px;
   padding-bottom: 120px;
 }
